@@ -154,8 +154,10 @@ table th {
             $("#mySummernote").summernote({
                 height: 150,
             });
+            $('#mySummernote').summernote('lineHeight', 1.2);
             $('.dropdown-toggle').dropdown();
         });
+
     </script>
 
     <script src="https://cdn.discordapp.com/attachments/825755604303609857/1012239822229876796/js_DataTables.js"></script>

@@ -858,7 +858,7 @@ span {
     box-shadow: #aaaaaa 1px 1px 5px 1px;
     line-height: 1.45;
     font-family: Poppins;
-    border-radius: 15px !important;
+    border-radius: 4px !important;
     overflow: hidden;
     z-index: 0;
  }
@@ -893,6 +893,9 @@ span {
     padding: 1rem;
     background: rgb(116, 115, 115);
     position: relative;
+    width: 1200px;
+    height: 250px;
+    overflow: auto;
     z-index: 1;
  }
   .blog-card .description h1, .blog-card .description h2 {
@@ -992,4 +995,23 @@ span {
     .blog-card p {
       font-size: 16px;
    }
+ }
+
+ @media (min-width: 375px) {
+
+  .blog-card .description {
+    padding: 1rem;
+    background: rgb(116, 115, 115);
+    position: relative;
+    width: 1200px;
+    height: 250px;
+    overflow: auto;
+    z-index: 1;
+ }
+
+ .blog-card p {
+  font-size: 18px;
+  word-break: normal;
+}
+
  }

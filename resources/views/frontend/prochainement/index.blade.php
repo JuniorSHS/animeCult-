@@ -15,7 +15,7 @@
       <h1> {{ $anime->name }} </h1>
       <h2> <?php $date = new DateTime($anime->date_release);
         echo $date->format('d/m/Y'); ?> </h2>
-      <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ac mattis mi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sollicitudin semper nisi, vestibulum egestas mauris malesuada ac. Quisque ac aliquam mauris, at porttitor neque. Sed sit amet laoreet mauris. Aliquam laoreet interdum ante vitae rutrum. </p>
+      <p> {!! $anime->description !!} </p>
       <p class="read-more">
         <a href="#">En savoir plus</a>
       </p>
