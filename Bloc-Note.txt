@@ -1,0 +1,33 @@
+/*--------------------------------------------*/
+ Pour faire une page, il faut commencer par faire un RCV
+/*--------------------------------------------*/
+
+    R = Route
+    C = Controller
+    V = Vue
+
+/*--------------------------------------------*/
+    NE PAS OUBLIER
+/*--------------------------------------------*/
+
+Php artisan serve = Se connecter au serveur
+php artisan make:migration create_NomTable
+
+/*--------------------------------------------*/
+Avec cette commande je vais ajouter une colonne dans la table
+/*--------------------------------------------*/
+
+// Une colonne avec comme nom "image" et comme type "string" et comme valeur "nullable"
+
+    Schema::table('users', function (Blueprint $table) {
+    $table->string('avatar')->nullable();
+    });
+
+ATTENTION FAUT LE METTRE DANS 
+"public function up()" pour ajouter la colonne.
+
+    Pour supprimer faut refaire la même chose mais :
+    CHANGER LE "string" en DropColum
+    Schema::table('users', function (Blueprint $table) {
+    $table->dropColum('avatar')->nullable();
+    });
