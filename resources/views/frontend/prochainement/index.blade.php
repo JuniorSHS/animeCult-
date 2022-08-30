@@ -17,7 +17,7 @@
         echo $date->format('d/m/Y'); ?> </h2>
       <p> {!! $anime->description !!} </p>
       <p class="read-more">
-        <a href="#">En savoir plus</a>
+        <a href="{{ url('prochainement/'. $anime->name) }}">En savoir plus</a>
       </p>
     </div>
   </div>

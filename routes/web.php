@@ -16,6 +16,7 @@ Route::get('membres', [App\Http\Controllers\Frontend\FrontendController::class, 
 Route::get('membres/{user_name}', [App\Http\Controllers\Frontend\FrontendController::class, 'viewMembers']);
 //affichier les animes à venir
 Route::get('prochainement', [App\Http\Controllers\Frontend\FrontendController::class, 'ViewProchainement']);
+Route::get('prochainement/{anime_name}', [App\Http\Controllers\Frontend\FrontendController::class, 'viewAnimes']);
 
 
 

@@ -18,7 +18,7 @@
             </div>
             <div class="pseudoBOX" 
             style="background:rgb(159, 159, 159); color:rgb(63, 63, 63); text-shadow:-1px 1px 0 rgba(0,0,0,0.1);">
-            <a href="{{ url('membres/'. $member->id) }}" class="text-decoration-none" style="color: rgb(236, 236, 236);">{{ $member->name }}</a>
+            <a href="{{ url('membres/'. $member->name) }}" class="text-decoration-none" style="color: rgb(236, 236, 236);">{{ $member->name }}</a>
             </div> 
         </div>
         <br><br>

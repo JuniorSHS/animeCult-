@@ -58,12 +58,12 @@ class FrontendController extends Controller
          }
             //Afficher le profil d'un membre avec son id
             
-                public function viewMembers(string $membre_id)
+                public function viewMembers(string $membres_name)
                 {
-                    $membre = User::where('id', $membre_id)->first();
-                    if($membre)
+                    $membres = User::where('name', $membres_name)->first();
+                    if($membres)
                     {
-                        return view('frontend.members.profil.profilview', compact('membre'));
+                        return view('frontend.members.profil.profilview', compact('membres'));
                     }
                     else
                     {
@@ -75,6 +75,19 @@ class FrontendController extends Controller
                 {
                     $animes = Anime::all();
                     return view('frontend.prochainement.index', compact('animes'));
+                }
+            //affichier la vue de l'anime avec son nom
+                public function viewAnimes(string $anime_name)
+                {
+                    $anime = Anime::where('name', $anime_name)->first();
+                    if($anime)
+                    {
+                        return view('frontend.prochainement.viewanime', compact('anime'));
+                    }
+                    else
+                    {
+                        return redirect('/');
+                    }
                 }
 
 }

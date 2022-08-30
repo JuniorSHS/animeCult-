@@ -763,7 +763,8 @@ body {
   padding: 20px;
   background: rgb(50, 50, 50);
   min-height: 460px;
-  font: italic 1.2em "Fira Sans", serif;
+  color: rgb(163, 163, 163);
+  font: bold 20px "Fira Sans", serif;
 }
 
 a, button, code, div, img, input, label, li, p, pre, select, span, svg, table, td, textarea, th, ul {
