@@ -894,7 +894,6 @@ span {
     padding: 1rem;
     background: rgb(116, 115, 115);
     position: relative;
-    /* width: 1200px; */
     height: 250px;
     overflow: auto;
     z-index: 1;
