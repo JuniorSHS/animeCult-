@@ -106,26 +106,13 @@
 		</div>
 		<div class="col-md-9">
             <div class="profile-content">
-                <center>
-                <font color="#ff0000">V</font>
-                <font color="#ff0f00">o</font>
-                <font color="#ff1e00">t</font>
-                <font color="#ff2d00">r</font>
-                <font color="#ff3c00">e</font>
-                <font color="#ff4b00"> </font>
-                <font color="#ff5a00">s</font>
-                <font color="#ff6900">u</font>
-                <font color="#ff7800">p</font>
-                <font color="#ff8700">e</font>
-                <font color="#ff9600">r</font>
-                <font color="#ffa500"> </font>
-                <font color="#ffb400">p</font>
-                <font color="#ffc300">r</font>
-                <font color="#ffd200">o</font>
-                <font color="#ffe100">f</font>
-                <font color="#fff000">i</font>
-                <font color="#ffff00">l</font>
-                </center>
+                <center><p>
+                    <font color="#ff0000">V</font><font color="#ff0f00">o</font><font color="#ff1e00">t</font><font color="#ff2d00">r</font><font color="#ff3c00">e</font>
+                    <font color="#ff4b00"> </font>
+                    <font color="#ff5a00">s</font><font color="#ff6900">u</font><font color="#ff7800">p</font><font color="#ff8700">e</font><font color="#ff9600">r</font>
+                    <font color="#ffa500"> </font>
+                    <font color="#ffb400">p</font><font color="#ffc300">r</font><font color="#ffd200">o</font><font color="#ffe100">f</font><font color="#fff000">i</font><font color="#ffff00">l</font>
+                </p></center>
             </div>
 		</div>
 	</div>

@@ -29,7 +29,7 @@
           @php
           $categories = App\Models\Category::where('navbar_status','0')->where('status','0')->take(4)->get();
       @endphp
-        <li class="nav-item"><a class="nav-link" href="#"> Actualités</a></li>
+        {{-- <li class="nav-item"><a class="nav-link" href="#"> Actualités</a></li> --}}
         <li class="nav-item"><a class="nav-link" href="{{ url("prochainement") }}">Prochainement</a></li>
         <li class="nav-item"><a class="nav-link" href="{{ url("membres") }}">Membres</a></li>
           <li class="nav-item dropdown">
@@ -44,7 +44,7 @@
                 @endforeach
               </ul>
           </li>
-            <li class="nav-item"><a class="nav-link" href="#">Qui sommes-nous ?</a></li>
+            {{-- <li class="nav-item"><a class="nav-link" href="#">Qui sommes-nous ?</a></li> --}}
 
             @if (Auth::check())
             <li class="nav-item dropdown">
