@@ -18,8 +18,8 @@
                     <h2 class="card-title mt-2">{{ $categories }}</h2>
                 </div>
                 <div class="card-footer d-flex align-items-center justify-content-between">
-                    <a class="small text-white stretched-link" href="{{ url('admin/category') }}">
-                        voir les catégories
+                    <a class="small text-white stretched-link" style="text-decoration: none;" href="{{ url('admin/category') }}">
+                        Voir les catégories
                     </a>
                     <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                 </div>
@@ -33,7 +33,7 @@
                     <h2 class="card-title mt-2">{{ $posts }}</h2>
                 </div>
                 <div class="card-footer d-flex align-items-center justify-content-between">
-                    <a class="small text-white stretched-link" href="{{ url('admin/posts') }}">
+                    <a class="small text-white stretched-link" style="text-decoration: none;" href="{{ url('admin/posts') }}">
                         Voir les articles
                     </a>
                     <div class="small text-white"><i class="fas fa-angle-right"></i></div>
@@ -48,14 +48,14 @@
                     <h2 class="card-title mt-2">{{ $users }}</h2>
                 </div>
                 <div class="card-footer d-flex align-items-center justify-content-between">
-                    <a class="small text-white stretched-link" href="{{ url('admin/users') }}">
+                    <a class="small text-white stretched-link" style="text-decoration: none;" href="{{ url('admin/users') }}">
                         Voir les Membres
                     </a>
                     <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                 </div>
             </div>
         </div>
-
+        
         <div class="col-xl-3 col-md-6">
             <div class="card bg-danger text-white mb-4">
                 <div class="card-body">
@@ -63,7 +63,7 @@
                     <h2 class="card-title mt-2">{{ $admins }}</h2>
                 </div>
                 <div class="card-footer d-flex align-items-center justify-content-between">
-                    <a class="small text-white stretched-link" href="{{ url('admin/users') }}">
+                    <a class="small text-white stretched-link" style="text-decoration: none;" href="{{ url('admin/users') }}">
                         Voir les Admins
                     </a>
                     <div class="small text-white"><i class="fas fa-angle-right"></i></div>

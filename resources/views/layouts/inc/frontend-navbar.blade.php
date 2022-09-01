@@ -52,9 +52,9 @@
                 {{ Auth::user()->name }}
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li class="dropdown-item">
+                  {{-- <li class="dropdown-item">
                       <a class="dropdown-item" href="{{ url('profile') }}"><center>Profile</center></a>
-                  </li>
+                  </li> --}}
                   <li class="dropdown-item">
                     <a class="nav-link" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><div style="color: #000; !important"><center>Déconnexion</center></div></a>
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">

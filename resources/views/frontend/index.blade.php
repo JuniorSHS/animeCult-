@@ -1,11 +1,8 @@
 @extends('layouts.app')
 
 @section('title', "$setting->nom_site")
-
 @section('meta_description', "$setting->meta_description")
-
 @section('meta_keyword', "$setting->meta_keyword")
-
 @section('content')
 
 <div class="bg-grey py-5">

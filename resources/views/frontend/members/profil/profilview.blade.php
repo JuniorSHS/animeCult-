@@ -114,7 +114,7 @@
                     <font color="#ffb400">P</font><font color="#ffc300">r</font><font color="#ffd200">o</font><font color="#ffe100">f</font><font color="#fff000">i</font><font color="#ffff00">l</font>
                 </p>
                 <p>
-                  Pour modifier votre profil, vous devrez avoir un compte prenium.
+                  Pour modifier votre profil, vous devrez avoir un compte premium.
                 </p>
               </center>
             </div>

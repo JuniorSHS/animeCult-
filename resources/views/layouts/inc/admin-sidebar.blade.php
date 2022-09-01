@@ -26,7 +26,7 @@
 
 
 
-                    <div class="sb-sidenav-menu-heading">Core</div>
+                    <div class="sb-sidenav-menu-heading">Statistique</div>
                     <a class="nav-link {{ Request::is('admin/dashboard') ? 'active':'' }}" href="{{ url('admin/dashboard') }}">
                         <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                         Dashboard
@@ -42,7 +42,7 @@
                     <div class="collapse {{ Request::is('admin/category') || Request::is('admin/add-category') ? 'show':'' }}" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                         <nav class="sb-sidenav-menu-nested nav">
                             <a class="nav-link {{ Request::is('admin/category') ? 'active':'' }}" href="{{ url('admin/category') }}">Liste des Catégories</a>
-                            <a class="nav-link {{ Request::is('admin/add-category') ? 'active':'' }}" href="{{ url('admin/add-category') }}">Ajouter une catégories</a>
+                            <a class="nav-link {{ Request::is('admin/add-category') ? 'active':'' }}" href="{{ url('admin/add-category') }}">Ajouter une catégorie</a>
                             
                         </nav>
                     </div>
