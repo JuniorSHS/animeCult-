@@ -15,13 +15,13 @@ class PostController extends Controller
     public function index()
     {
         $posts = Post::all();
-        return view('admin.post.index', compact('posts'));
+        return view('Admin.post.index', compact('posts'));
     }
 
     public function create()
     {
         $category = Category::where('status', '0')->get();
-        return view('admin.post.create', compact('category'));
+        return view('Admin.post.create', compact('category'));
     }
 
     public function store(PostFormRequest $request)
@@ -56,7 +56,7 @@ class PostController extends Controller
     {
         $post = Post::find($post_id);
         $category = Category::where('status', '0')->get();
-        return view('admin.post.edit', compact('post', 'category'));
+        return view('Admin.post.edit', compact('post', 'category'));
     }
 
     public function update(PostFormRequest $request, $post_id)

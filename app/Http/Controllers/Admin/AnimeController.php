@@ -15,14 +15,14 @@ class AnimeController extends Controller
     public function index() 
     {
         $animes = Anime::all();
-        return view('admin.anime.index', compact('animes'));
+        return view('Admin.anime.index', compact('animes'));
     }
 
     //Ajouter un anime
     public function create()
     { 
         $category = Category::where('status', '0')->get();
-        return view('admin.anime.create', compact('category'));
+        return view('Admin.anime.create', compact('category'));
     }
 
     public function store(AnimeFormRequest $request)
@@ -57,7 +57,7 @@ class AnimeController extends Controller
     {
         $anime = Anime::find($anime_id);
         $category = Category::where('status', '0')->get();
-        return view('admin.anime.edit', compact('anime', 'category'));
+        return view('Admin.anime.edit', compact('anime', 'category'));
     }
     //supprimer un anime
     public function destroy(Request $request)

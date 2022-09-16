@@ -20,7 +20,7 @@ class DashboardController extends Controller
         $users = User::where('role', '0')->count();
         //compteur le nomdre d'aministrateurs
         $admins = User::where('role', '1')->count();
-        return view('admin.dashboard', compact('categories', 'posts', 'users','admins'));
+        return view('Admin.dashboard', compact('categories', 'posts', 'users','admins'));
     }
 
 }

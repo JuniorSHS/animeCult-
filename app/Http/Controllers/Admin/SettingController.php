@@ -13,7 +13,7 @@ class SettingController extends Controller
     public function index()
     {
         $setting = Paremetres::first();
-        return view('admin.settings.index', compact('setting'));
+        return view('Admin.settings.index', compact('setting'));
     }
 
     public function savedata(Request $request)
