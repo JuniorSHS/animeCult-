@@ -4,9 +4,10 @@ namespace App\Http\Controllers\Admin;
 
 use App\Models\Post;
 use App\Models\Category;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use Illuminate\Support\Str;
+use Illuminate\Support\Facades\File;
 use App\Http\Requests\Admin\PostFormRequest;
 
 class PostController extends Controller
@@ -68,8 +69,21 @@ class PostController extends Controller
         $post->name = $data['name'];
         $post->slug = Str::slug($data['slug']);
         $post->description = $data['description'];
-        $post->image = $data['image'];
+        // $post->image = $data['image'];
 
+        if($request->hasFile('image')) 
+        {
+            $destination = 'uploads/post/'.$post->image;
+            if(File::exists($destination))
+            {
+                File::delete($destination);
+            }
+            $file = $request->file('image');
+            $extension = $file->getClientOriginalExtension();
+            $filename = time(). '.' . $extension;
+            $file->move('uploads/post/', $filename);
+            $post->image = $filename;
+        }
 
         // if ($request->hasFile('image')) {
 

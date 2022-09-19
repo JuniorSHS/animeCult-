@@ -65,6 +65,8 @@
             </li>
             @else
             <li class="nav-item"><a class="nav-link" href="{{ url('login') }}">Connexion</a></li>
+            {{-- Ne plus affichier le bouton d'inscription quand l'utilisateur est connecté --}}
+            <li class="nav-item"><a class="nav-link" href="{{ url('register') }}">Inscription</a></li>
             @endif
 
             {{-- <li class="nav-item">
