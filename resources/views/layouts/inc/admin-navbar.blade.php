@@ -1,6 +1,6 @@
 <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
     <!-- Navbar Brand-->
-    <a class="navbar-brand ps-3" href="index.html">Anime Calendrier</a>
+    <a class="navbar-brand ps-3" href="index.html">AnimeCult'</a>
     <!-- Sidebar Toggle-->
     <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
     <!-- Navbar-->
@@ -11,8 +11,8 @@
                 <span class="d-none d-md-inline-block">Bienvenue, {{ Auth::user()->name }}</span>
                 <i class="fas fa-user fa-fw"></i></a>
             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="#!">Paremètre</a></li>
-                <li><a class="dropdown-item" href="#!">Activités Los</a></li>
+                <li><a class="dropdown-item" href="{{ url('admin/settings') }}">Paremètre</a></li>
+                <li><a class="dropdown-item" href="{{ url('admin/logse') }}">Activités Logs</a></li>
                 <li><hr class="dropdown-divider" /></li>
                 <li>
                     {{-- Déconnection de l'utilisateur connecté --}}

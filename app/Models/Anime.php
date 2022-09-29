@@ -33,6 +33,7 @@ class Anime extends Model
     /**
 
  * Un modele A appartient à un modele B (ou "est associé à" ou "a").
+ * clé étrangère de la table A
 
  */
 

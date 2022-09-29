@@ -28,6 +28,7 @@ Route::prefix('admin')->middleware(['auth','isAdmin'])->group(function () {
     Route::get('/posts', [App\Http\Controllers\Admin\PostController::class, 'index']);
     Route::get('/users', [App\Http\Controllers\Admin\UserController::class, 'index']);
     Route::get('/settings', [App\Http\Controllers\Admin\SettingController::class, 'index']);
+    Route::get('/logse', [App\Http\Controllers\Admin\LogController::class, 'index']);
     //Ajouter une catégorie  
     Route::get('add-category', [App\Http\Controllers\Admin\CategoryController::class, 'create']);
     Route::post('add-category', [App\Http\Controllers\Admin\CategoryController::class, 'store']);

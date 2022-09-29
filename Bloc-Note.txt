@@ -10,6 +10,8 @@
     NE PAS OUBLIER
 /*--------------------------------------------*/
 
+php artisan make:controller Admin/LogController
+
 Php artisan serve = Se connecter au serveur
 php artisan make:migration create_NomTable
 
