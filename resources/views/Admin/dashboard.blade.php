@@ -10,7 +10,6 @@
         <li class="breadcrumb-item active">Dashboard</li>
     </ol>
     <div class="row">
-        
         <div class="col-xl-3 col-md-6">
             <div class="card bg-primary text-white mb-4">
                 <div class="card-body">
@@ -71,20 +70,4 @@
             </div>
         </div>
     </div>
-    <div class="row">
-        <div class="col-xl-5 col-md-6">
-      <div class="card mb-4">
-        <div class="card-header">
-            <i class="fas fa-chart-area me-1"></i>
-            Graphique des utilisateurs enregistrés
-        </div>
-        <div class="card-body">
-
-            Affichier un graphique en utilisant la librairie Chart.js
-            
-        </div>
-    </div>
-        </div>
-    </div>
-
 @endsection

@@ -94,50 +94,6 @@
                              </div>
                          @endforeach
                     </div>
-            {{-- Carde pour les publications récentes --}}
-            {{-- <div class="row">
-        @foreach ($latest_posts as $latest_posts_item)
-       <div class="col col-md-offset-2">
-            <div class="flip-card-container" style="--hue: 220">
-                <div class="flip-card">
-                <div class="card-front">
-                    <figure>
-                    <div class="img-bg"></div>
-                    <img class="imgCard" src="{{ asset('uploads/post/'.$latest_posts_item->image) }}" alt="">
-                    <figcaption>{{ $latest_posts_item->name }}</figcaption>
-                    </figure>
-            
-                    <ul class="tlb">
-                    <li class="ndt li">Detail 1</li>
-                    <li class="ndt li">Detail 2</li>
-                    <li class="ndt li">Detail 3</li>
-                    </ul>
-                </div>
-            
-                <div class="card-back">
-                    <figure>
-                    <div class="img-bg"></div>
-                    <img class="imgCard" src="{{ asset('uploads/post/'.$latest_posts_item->image) }}" alt="">
-                    </figure>
-            
-                    <div class="buttonCard"><i class="fa-solid fa-plus-minus"></i></div>
-            
-                    <div class="design-container">
-                    <span class="design design--1"></span>
-                    <span class="design design--2"></span>
-                    <span class="design design--3"></span>
-                    <span class="design design--4"></span>
-                    <span class="design design--5"></span>
-                    <span class="design design--6"></span>
-                    <span class="design design--7"></span>
-                    <span class="design design--8"></span>
-                    </div>
-                </div>
-                </div>
-            </div>
-        </div>
-        @endforeach
-        </div> --}}
     </div>
     </div>
 </div>
