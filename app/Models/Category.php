@@ -25,7 +25,6 @@ class Category extends Model
     ];
 
     //supprier les posts liés à la table categories
-    // petit bug à corrigé plus tard
     // public function posts()
     // {
     //     return $this->hasMany(Post::class, 'category_id', 'id');

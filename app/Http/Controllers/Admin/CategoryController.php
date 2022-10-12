@@ -23,31 +23,35 @@ class CategoryController extends Controller
     }
 
     public function store(CategoryFormRequest $request)
+    //Condition try catch, si la requête est valide, on enregistre les données dans la base de données et on redirige vers la page index. Sinon on regirige vers la page index avec un message d'erreur.
     {
-        $data = $request->validated();
-
-        $category = new Category;
-        $category->name = $data['name'];
-        $category->slug = Str::slug($data['slug']);
-        $category->description = $data['description'];
-
-        if ($request->hasFile('image')) {
-            $file = $request->file('image');
-            $filename = time() . '.' . $file->getClientOriginalName();
-            $file->move('uploads/category/', $filename);
-            $category->image = $filename;
+        try {
+            $data = $request->validated();
+            $category = new Category();
+            $category->name = $data['name'];
+            $category->slug = Str::slug($data['slug']);
+            $category->description = $data['description'];
+            $category->meta_title = $data['meta_title'];
+            $category->meta_description = $data['meta_description'];
+            $category->meta_keyword = $data['meta_keyword'];
+            $category->navbar_status = $request->navbar_status == true ? '1' : '0';
+            $category->status = $request->status == true ? '1' : '0';
+            $category->created_by = auth()->user()->id;
+            //upload l'image dans le dossier public/uploads/category avec le nom original de l'image
+            if ($request->hasFile('image')) {
+                $file = $request->file('image');
+                $filename = time() . '.' . $file->getClientOriginalName();
+                $file->move('uploads/category/', $filename);
+                $category->image = $filename;
+            }
+        //condition try catch, on enregistre seulement si les données attrapé sont valides.
+            $category->save();
+            return redirect('admin/category')->with('message', 'Votre catégorie a été ajouté avec succès');
+        } catch (\Exception $exception) {
+            return redirect('admin/category')->with('message', 'Une erreur est survenue lors de l\'ajout de votre catégorie');
         }
-
-        $category->meta_title = $data['meta_title'];
-        $category->meta_description = $data['meta_description'];
-        $category->meta_keyword = $data['meta_keyword'];
-        $category->navbar_status = $request->navbar_status == true ? '1' : '0';
-        $category->status = $request->status == true ? '1' : '0';
-        $category->created_by = auth()->user()->id;
-        $category->save();
-
-        return redirect('admin/category')->with('message', 'Votre catégorie a été créée avec succès !!');
     }
+    
 
     public function edit($id)
     {

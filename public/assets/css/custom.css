@@ -1006,3 +1006,191 @@ span {
    }
 
  }
+
+ /* PROCHAINEMENT CARD  */
+
+ @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,300,600,700,900);
+
+ a.btnn {
+	 background: #bc463e;
+	 border-radius: 4px;
+	 box-shadow: 0 2px 0px 0 rgba(0,0,0,0.25);
+	 color: #ffffff;
+	 display: inline-block;
+	 padding: 6px 30px 8px;
+	 position: relative;
+	 text-decoration: none;
+	 transition: all 0.1s 0s ease-out;
+   
+}
+a.butnn {
+  background: #939393;
+  border-radius: 4px;
+  box-shadow: 0 2px 0px 0 rgba(0,0,0,0.25);
+  color: #ffffff;
+  display: inline-block;
+  padding: 6px 30px 8px;
+  position: relative;
+  text-decoration: none;
+  transition: all 0.1s 0s ease-out;
+  
+}
+.no-touch a.butnn:hover {
+  background: #888888;
+  box-shadow: 0px 8px 2px 0 rgba(0,0,0,0.075);
+  transform: translateY(-2px);
+  transition: all 0.25s 0s ease-out;
+}
+.no-touch a.butnn:active, a.butnn:active {
+  background: #474747;
+  box-shadow: 0 1px 0px 0 rgba(255,255,255,0.25);
+  transform: translate3d(0,1px,0);
+  transition: all 0.025s 0s ease-out;
+}
+ .no-touch a.btnn:hover {
+	 background: #cc6a63;
+	 box-shadow: 0px 8px 2px 0 rgba(0,0,0,0.075);
+	 transform: translateY(-2px);
+	 transition: all 0.25s 0s ease-out;
+}
+ .no-touch a.btnn:active, a.btnn:active {
+	 background: #cc7575;
+	 box-shadow: 0 1px 0px 0 rgba(255,255,255,0.25);
+	 transform: translate3d(0,1px,0);
+	 transition: all 0.025s 0s ease-out;
+}
+ div.cardNs {
+	 margin: 10px auto;
+	 max-width: 960px;
+	 text-align: center;
+}
+ div.cardN {
+	 background: #ffffff;
+	 display: inline-block;
+	 margin: 8px;
+	 max-width: 300px;
+	 perspective: 1000;
+	 position: relative;
+	 text-align: left;
+	 transition: all 0.3s 0s ease-in;
+	 width: 300px;
+	 z-index: 1;
+}
+ div.cardN img {
+  width: 300px;
+  height: 225px;
+   object-fit: cover;
+}
+ div.cardN .cardN__image-holder {
+	 background: rgba(0,0,0,0.1);
+	 height: 0;
+	 padding-bottom: 75%;
+   object-fit: cover;
+}
+ div.cardN div.cardN-title {
+	 background: #8f8f8f;
+	 padding: 6px 15px 10px;
+	 position: relative;
+	 z-index: 0;
+}
+ div.cardN div.cardN-title a.toggle-info {
+	 border-radius: 32px !important;
+	 height: 32px;
+	 padding: 0;
+	 position: absolute;
+	 right: 15px;
+	 top: 10px;
+	 width: 32px;
+}
+ div.cardN div.cardN-title a.toggle-info span {
+	 background: #ffffff;
+	 display: block;
+	 height: 2px;
+	 position: absolute;
+	 top: 16px;
+	 transition: all 0.15s 0s ease-out;
+	 width: 12px;
+}
+ div.cardN div.cardN-title a.toggle-info span.left {
+	 right: -6px;
+   margin-top: 15px;
+	 transform: rotate(45deg);
+}
+ div.cardN div.cardN-title a.toggle-info span.right {
+	 left: 14px;
+   margin-top: -2px;
+	 transform: rotate(-45deg);
+}
+ div.cardN div.cardN-title h2 {
+	 font-size: 24px;
+	 font-weight: 700;
+	 letter-spacing: -0.05em;
+	 margin: 0;
+	 padding: 0;
+}
+ div.cardN div.cardN-title h2 small {
+	 display: block;
+	 font-size: 18px;
+	 font-weight: 600;
+	 letter-spacing: -0.025em;
+}
+ div.cardN div.cardN-description {
+	 padding: 0 15px 10px;
+	 position: relative;
+	 font-size: 14px;
+}
+ div.cardN div.cardN-actions {
+	 box-shadow: 0 2px 0px 0 rgba(0,0,0,0.075);
+	 padding: 10px 15px 20px;
+	 text-align: center;
+}
+ div.cardN div.cardN-flap {
+	 background: #d9d9d9;
+	 position: absolute;
+	 width: 100%;
+	 transform-origin: top;
+	 transform: rotateX(-90deg);
+}
+ div.cardN div.flap1 {
+	 transition: all 0.3s 0.3s ease-out;
+	 z-index: -1;
+}
+ div.cardN div.flap2 {
+	 transition: all 0.3s 0s ease-out;
+	 z-index: -2;
+}
+ div.cardNs.showing div.cardN {
+	 cursor: pointer;
+	 opacity: 0.6;
+	 transform: scale(0.88);
+}
+ .no-touch div.cardNs.showing div.cardN:hover {
+	 opacity: 0.94;
+	 transform: scale(0.92);
+}
+ div.cardN.show {
+	 opacity: 1 !important;
+	 transform: scale(1) !important;
+}
+ div.cardN.show div.cardN-title a.toggle-info {
+	 background: #ff6666 !important;
+}
+ div.card.show div.card-title a.toggle-info span {
+	 top: 15px;
+}
+ div.cardN.show div.cardN-title a.toggle-info span.left {
+	 right: -10px;
+}
+ div.cardN.show div.cardN-title a.toggle-info span.right {
+	 left: 10px;
+}
+ div.cardN.show div.cardN-flap {
+	 background: #b1b1b1;
+	 transform: rotateX(0deg);
+}
+ div.cardN.show div.flap1 {
+	 transition: all 0.3s 0s ease-out;
+}
+ div.cardN.show div.flap2 {
+	 transition: all 0.3s 0.2s ease-out;
+}
