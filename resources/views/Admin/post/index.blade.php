@@ -47,7 +47,14 @@
             </div>
             @endif
               </div>
-            
+              <div id="bloc-10"><script> setInterval(function(){ var obj = document.getElementById("bloc-10"); obj.innerHTML = "";},3000);</script>
+                @if (session('error'))
+            <div class="alert alert-warning">
+               <center> {{ session('error') }} </center>
+            </div>
+            @endif
+              </div>
+              
 
             <table id="myDataTable" class="table table-striped" aria-describedby="myDataTable_info">
                 <thead>

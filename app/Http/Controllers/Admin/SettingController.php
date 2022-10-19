@@ -20,17 +20,33 @@ class SettingController extends Controller
     {
         $validator = Validator::make($request->all(), [
             'nom_site' => 'required|string|max:255',
-            'logo_site' => 'nullable',
-            'favicon_site' => 'nullable',
+            'logo_site' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048', // 2MB Max
+            'favicon_site' => 'nullable|image|mimes:jpeg,png,jpg|max:2048',
             'description' => 'nullable',
             'meta_title' => 'required|string|max:255',
             'meta_description' => 'nullable',
             'meta_keyword' => 'nullable',
         ]);
 
-        if ($validator->fails()) 
-        {
-            return redirect()->back()->withErrors($validator);
+        // if ($validator->fails()) 
+        // {
+        //     return redirect()->back()->withErrors($validator);
+        // }
+
+        //si le logo ne contient pas la bonne extension alors on retourne une erreur
+        if ($request->hasFile('logo_site')) {
+            $extension = $request->file('logo_site')->getClientOriginalExtension();
+            if ($extension != 'png' && $extension != 'jpg' && $extension != 'jpeg' && $extension != 'gif') {
+                return redirect()->back()->with('error', 'Le logo doit être une image de type png, jpg, jpeg ou gif');
+            }
+        }
+
+        //si le favicon ne contient pas la bonne extension alors on retourne une erreur
+        if ($request->hasFile('favicon_site')) {
+            $extension = $request->file('favicon_site')->getClientOriginalExtension();
+            if ($extension != 'png' && $extension != 'jpg' && $extension != 'jpeg') {
+                return redirect()->back()->with('error', 'Le favicon doit être une image de type png, jpg ou jpeg');
+            }
         }
 
         $setting = Paremetres::where('id', '1')->first();

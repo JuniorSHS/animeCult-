@@ -30,8 +30,8 @@
           $categories = App\Models\Category::where('navbar_status','0')->where('status','0')->take(4)->get();
       @endphp
         {{-- <li class="nav-item"><a class="nav-link" href="#"> Actualités</a></li> --}}
-        <li class="nav-item"><a class="nav-link" href="{{ url("prochainement") }}">Prochainement</a></li>
-        <li class="nav-item"><a class="nav-link" href="{{ url("membres") }}">Membres</a></li>
+        <li class="nav-item"><a class="nav-link" href="{{ url("prochainement") }}" target="_blank">Prochainement</a></li>
+        <li class="nav-item"><a class="nav-link" href="{{ url("membres") }}" target="_blank">Membres</a></li>
           <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Catégories
@@ -52,11 +52,18 @@
                 {{ Auth::user()->name }}
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  {{-- <li class="dropdown-item">
-                      <a class="dropdown-item" href="{{ url('profile') }}"><center>Profile</center></a>
-                  </li> --}}
                   <li class="dropdown-item">
-                    <a class="nav-link" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><div style="color: #000; !important"><center>Déconnexion</center></div></a>
+                      {{-- Si un utilisateur a le rôle administrateur alors il aura un bouton "Dashboard" sur la navbar --}}
+                      @if (Auth::user()->role == '1')
+                      <a class="dropdown-item" href="{{ url('/admin/dashboard') }}" target="_blank"><center>Dashboard</center></a>
+                      @endif
+                  </li>
+                  <li class="dropdown-item">
+                    <a class="dropdown-item" href="{{ url('profile/') }}" target="_blank"><center>Profile</center></a>
+                  </li>
+                  <li class="dropdown-item">
+                    <a class="nav-link" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                      <div style="color: #000; !important"><center>Déconnexion</center></div></a>
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                    @csrf
                    </form>

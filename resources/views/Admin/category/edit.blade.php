@@ -45,8 +45,12 @@
                     </div>
 
                     <div class="mb-3">
+                        {{-- Condition if, si le champs image n'est pas modifié alors l'image sera converser. --}}
                         <label>Image</label>
-                        <input type="file" name="image" class="form-control">
+                        <input type="file" name="image" class="form-control"><br>
+                        @if ($category->image)
+                            <img src="{{ asset('uploads/category/'.$category->image) }}" alt="" width="200px">
+                        @endif
                     </div>
 
                     <h6>SEO Tags</h6>

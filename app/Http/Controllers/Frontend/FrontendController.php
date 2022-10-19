@@ -89,6 +89,12 @@ class FrontendController extends Controller
                         return redirect('/');
                     }
                 }
+    //afficher le profile de l'utilisateur
+    public function ViewProfile()
+    {
+        
+        return view('frontend.profile.viewprofile');
+    }
 
 }
 

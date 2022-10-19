@@ -17,7 +17,7 @@
                 </div>
                 <div class="modal-body">
                     <input type="hidden" name="category_delete_id" id="category_id">
-                <h6 class="text-center"> Coucou, êtes-vous sûr de vouloir supprimer cette catégorie ? </h6>
+                <h6 class="text-center">Êtes-vous sûr de vouloir supprimer cette catégorie ? </h6>
                 </div>
                 <div class="modal-footer">
                 <button type="submit" class="btn btn-danger">Oui, je suis sûr.</button>
@@ -45,6 +45,13 @@
                 @if (session('message'))
             <div class="alert alert-success">
                <center> {{ session('message') }} </center>
+            </div>
+            @endif
+              </div>
+              <div id="bloc-10"><script> setInterval(function(){ var obj = document.getElementById("bloc-10"); obj.innerHTML = "";},3000);</script>
+                @if (session('error'))
+            <div class="alert alert-danger">
+               <center> {{ session('error') }} </center>
             </div>
             @endif
               </div>

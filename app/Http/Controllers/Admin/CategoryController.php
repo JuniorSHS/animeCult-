@@ -23,7 +23,8 @@ class CategoryController extends Controller
     }
 
     public function store(CategoryFormRequest $request)
-    //Condition try catch, si la requête est valide, on enregistre les données dans la base de données et on redirige vers la page index. Sinon on regirige vers la page index avec un message d'erreur.
+    //Condition try catch, si la requête est valide, on enregistre les données dans la base de données et on redirige vers la page index. 
+    //Sinon on redirige vers la page index avec un message d'erreur.
     {
         try {
             $data = $request->validated();
@@ -61,38 +62,38 @@ class CategoryController extends Controller
 
     public function update(CategoryFormRequest $request, $category_id)
     {
+        try {
+        //on récupère les données de la requête et on les valide 
         $data = $request->validated();
-
         $category = Category::findOrFail($category_id);
         $category->name = $data['name'];
         $category->slug = Str::slug($data['slug']);
         $category->description = $data['description'];
-
+        //si le champ image est rempli, on supprime l'ancienne image et on upload la nouvelle image
         if ($request->hasFile('image')) {
-
             $destination = 'uploads/category/'.$category->image;
-
             if (File::exists($destination)) {
                 File::delete($destination);
             }
-
             $file = $request->file('image');
             $filename = time() . '.' . $file->getClientOriginalName();
             $file->move('uploads/category/', $filename);
             $category->image = $filename;
         }
-
         $category->meta_title = $data['meta_title'];
         $category->meta_description = $data['meta_description'];
         $category->meta_keyword = $data['meta_keyword'];
         $category->navbar_status = $request->navbar_status == true ? '1' : '0';
         $category->status = $request->status == true ? '1' : '0';
         $category->created_by = auth()->user()->id;
+        //on enregistre les données dans la base de données et on redirige vers la page index avec un message de succès
+        //sinon on redirige vers la page index avec un message d'erreur
         $category->update();
-
-        return redirect('admin/category')->with('message', 'Votre catégorie a été modifiée avec succès !!');
+        return redirect('admin/category')->with('message', 'Votre modification a été ajouté avec succès');
+    } catch (\Exception $exception) {
+        return redirect('admin/category')->with('message', 'Une erreur est survenue lors de la modification de votre catégorie');
     }
-
+}
 
 
     public function destroy(Request $request)

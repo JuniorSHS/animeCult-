@@ -18,6 +18,12 @@
                 </div>
             @endif
 
+            @if (session('error'))
+                <center><div class="alert alert-danger">
+                    {{ session('error') }}
+                </div></center>
+            @endif
+
 
             <div class="card">
                 <div class="card-header">
